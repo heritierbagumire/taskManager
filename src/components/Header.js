@@ -1,20 +1,17 @@
 import Button from './Button';
 // import PropTypes from 'prop-types';
-const Header = ({title}) => {
-
-    const onClick = () => {
-        console.log('click');
-    }
+const Header = ({title, onAdd,  showAdd}) => {
     return (
   <header className='header'>
-     <h1>Task  {title}</h1>
-    <Button color='green' text='Add' onClick={onClick} />
+     <h1>Task {title}</h1>
+    <Button color={showAdd ? 'red' : 'green'} text={showAdd ? 'close' : 'Add'} onClick={onAdd} />
     
      
 </header>
     )
 
 }
+
 //  css outside an element
 
 // const headingStyle = {
@@ -23,12 +20,20 @@ const Header = ({title}) => {
 // }
 
 
+
 Header.defaultProps = {
     title: 'Tracker',
 }
+
 // Header.propTypes = {
 //     title: PropTypes.string.isRequired, 
 
+
+
+
+
 // }
 export default  Header;
+
+
 
