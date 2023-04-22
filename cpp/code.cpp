@@ -12,4 +12,5 @@ using main()
     count << "Name: " << str_name <<endl;
 
     return 0;
+
 }
